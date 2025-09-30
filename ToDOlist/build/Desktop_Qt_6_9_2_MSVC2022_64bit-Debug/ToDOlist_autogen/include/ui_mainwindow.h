@@ -70,6 +70,7 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
+        QObject::connect(pushButton, &QPushButton::clicked, listWidget, qOverload<>(&QListWidget::close));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

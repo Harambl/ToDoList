@@ -6,87 +6,66 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>809</width>
-    <height>515</height>
+    <width>951</width>
+    <height>523</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>951</width>
+    <height>523</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>951</width>
+    <height>523</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>TDList</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>70</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>120</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>170</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_4">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>220</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>601</width>
-      <height>471</height>
+      <width>951</width>
+      <height>371</height>
      </rect>
     </property>
+    <layout class="QVBoxLayout" name="TaskLayout">
+     <item>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>947</width>
+          <height>367</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QScrollBar" name="verticalScrollBar">
+   <widget class="QPushButton" name="AddButton">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>0</y>
-      <width>20</width>
-      <height>471</height>
+      <x>220</x>
+      <y>400</y>
+      <width>501</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Orientation::Vertical</enum>
+    <property name="text">
+     <string>Добавить задачу</string>
     </property>
    </widget>
   </widget>
@@ -95,7 +74,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>809</width>
+     <width>951</width>
      <height>22</height>
     </rect>
    </property>

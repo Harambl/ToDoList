@@ -42,9 +42,9 @@ endif()
 # _directory_contents at C:/Qt/6.9.2/msvc2022_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/BAZA PC/Documents/ToDOlist/*.cpp")
 set(OLD_GLOB
-  "C:/Users/BAZA PC/Documents/ToDOlist/Classes.cpp"
   "C:/Users/BAZA PC/Documents/ToDOlist/build/Desktop_Qt_6_9_2_MSVC2022_64bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/BAZA PC/Documents/ToDOlist/build/Desktop_Qt_6_9_2_MSVC2022_64bit-Debug/ToDOlist_autogen/EWIEGA46WW/moc_mainwindow.cpp"
+  "C:/Users/BAZA PC/Documents/ToDOlist/build/Desktop_Qt_6_9_2_MSVC2022_64bit-Debug/ToDOlist_autogen/EWIEGA46WW/moc_taskframe.cpp"
   "C:/Users/BAZA PC/Documents/ToDOlist/build/Desktop_Qt_6_9_2_MSVC2022_64bit-Debug/ToDOlist_autogen/mocs_compilation.cpp"
   "C:/Users/BAZA PC/Documents/ToDOlist/main.cpp"
   "C:/Users/BAZA PC/Documents/ToDOlist/mainwindow.cpp"
@@ -67,7 +67,6 @@ endif()
 # _directory_contents at C:/Qt/6.9.2/msvc2022_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/BAZA PC/Documents/ToDOlist/*.h")
 set(OLD_GLOB
-  "C:/Users/BAZA PC/Documents/ToDOlist/Classes.h"
   "C:/Users/BAZA PC/Documents/ToDOlist/build/Desktop_Qt_6_9_2_MSVC2022_64bit-Debug/CMakeFiles/ShowIncludes/foo.h"
   "C:/Users/BAZA PC/Documents/ToDOlist/build/Desktop_Qt_6_9_2_MSVC2022_64bit-Debug/ToDOlist_autogen/include/ui_mainwindow.h"
   "C:/Users/BAZA PC/Documents/ToDOlist/mainwindow.h"

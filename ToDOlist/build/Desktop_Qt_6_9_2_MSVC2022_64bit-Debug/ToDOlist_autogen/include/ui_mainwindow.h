@@ -11,12 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,12 +25,11 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QListWidget *listWidget;
-    QScrollBar *verticalScrollBar;
+    QPushButton *AddButton;
+    QScrollArea *TaskScrollArea;
+    QWidget *scrollAreaWidgetContents;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *TaskLayout;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,39 +37,51 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(809, 515);
+        MainWindow->resize(951, 523);
+        MainWindow->setMinimumSize(QSize(951, 523));
+        MainWindow->setMaximumSize(QSize(951, 523));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Gadugi")});
+        font.setPointSize(11);
+        MainWindow->setFont(font);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(227, 171, 142);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(660, 70, 101, 41));
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(660, 120, 101, 41));
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(660, 170, 101, 41));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(660, 220, 101, 41));
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName("listWidget");
-        listWidget->setGeometry(QRect(0, 0, 601, 471));
-        verticalScrollBar = new QScrollBar(centralwidget);
-        verticalScrollBar->setObjectName("verticalScrollBar");
-        verticalScrollBar->setGeometry(QRect(600, 0, 20, 471));
-        verticalScrollBar->setOrientation(Qt::Orientation::Vertical);
+        AddButton = new QPushButton(centralwidget);
+        AddButton->setObjectName("AddButton");
+        AddButton->setGeometry(QRect(210, 410, 501, 41));
+        AddButton->setAutoFillBackground(false);
+        AddButton->setStyleSheet(QString::fromUtf8("background-color: rgb(29, 131, 255);"));
+        TaskScrollArea = new QScrollArea(centralwidget);
+        TaskScrollArea->setObjectName("TaskScrollArea");
+        TaskScrollArea->setGeometry(QRect(20, 0, 891, 381));
+        TaskScrollArea->setMinimumSize(QSize(891, 381));
+        TaskScrollArea->setMaximumSize(QSize(891, 381));
+        TaskScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAlwaysOff);
+        TaskScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarPolicy::ScrollBarAsNeeded);
+        TaskScrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 889, 379));
+        scrollAreaWidgetContents->setAcceptDrops(true);
+        verticalLayoutWidget = new QWidget(scrollAreaWidgetContents);
+        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
+        verticalLayoutWidget->setGeometry(QRect(19, 9, 851, 361));
+        TaskLayout = new QVBoxLayout(verticalLayoutWidget);
+        TaskLayout->setObjectName("TaskLayout");
+        TaskLayout->setSizeConstraint(QLayout::SizeConstraint::SetMinimumSize);
+        TaskLayout->setContentsMargins(0, 0, 0, 0);
+        TaskScrollArea->setWidget(scrollAreaWidgetContents);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 809, 22));
+        menubar->setGeometry(QRect(0, 0, 951, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
-        QObject::connect(pushButton, &QPushButton::clicked, listWidget, qOverload<>(&QListWidget::close));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -78,10 +89,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "TDList", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        AddButton->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\267\320\260\320\264\320\260\321\207\321\203", nullptr));
     } // retranslateUi
 
 };

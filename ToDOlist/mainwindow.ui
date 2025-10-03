@@ -22,51 +22,96 @@
     <height>523</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>Gadugi</family>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>TDList</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(227, 171, 142);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>951</width>
-      <height>371</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="TaskLayout">
-     <item>
-      <widget class="QScrollArea" name="scrollArea">
-       <property name="widgetResizable">
-        <bool>true</bool>
-       </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>947</width>
-          <height>367</height>
-         </rect>
-        </property>
-       </widget>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QPushButton" name="AddButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>400</y>
+      <x>210</x>
+      <y>410</y>
       <width>501</width>
       <height>41</height>
      </rect>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(29, 131, 255);</string>
+    </property>
     <property name="text">
      <string>Добавить задачу</string>
     </property>
+   </widget>
+   <widget class="QScrollArea" name="TaskScrollArea">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>891</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>891</width>
+      <height>381</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>891</width>
+      <height>381</height>
+     </size>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>889</width>
+       <height>379</height>
+      </rect>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>9</y>
+        <width>851</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="TaskLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
+       </property>
+      </layout>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

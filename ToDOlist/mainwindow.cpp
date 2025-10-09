@@ -160,7 +160,6 @@ void MainWindow::updateTaskList(){
         NumLayout->addWidget(compButton);
 
         ui->TaskLayout->addWidget(TWidget);
-
     }
 }
 
@@ -214,10 +213,14 @@ void MainWindow::createTaskFrame(){
     NumLayout->addWidget(compButton);
 
     ui->TaskLayout->addWidget(TWidget);
-
 }
 
 void MainWindow::on_AddButton_clicked(){
-    MainWindow::createTaskFrame();
+    if (ui->TaskLayout->count() < 6){
+        MainWindow::createTaskFrame();
+    } else{
+        QMessageBox* TooMany = new QMessageBox;
+        TooMany->information(this, "Too many tasks", "Задач не может быть больше 6");
+    }
 }
 
